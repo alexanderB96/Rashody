@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelGrafik = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.HistoryLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -87,17 +87,17 @@
             this.listHistory1 = new System.Windows.Forms.ListBox();
             this.listHistory = new System.Windows.Forms.ListBox();
             this.Grafik = new System.Windows.Forms.TabPage();
+            this.otcPribl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.texPribl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.otcDohod = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.texDohod = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.otcRashod = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.texRashod = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.posNed = new Bunifu.Framework.UI.BunifuThinButton2();
             this.etotM = new Bunifu.Framework.UI.BunifuThinButton2();
             this.proshM = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.otcRashod = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.texRashod = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.texDohod = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.otcDohod = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.texPribl = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.otcPribl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabControl.SuspendLayout();
@@ -387,7 +387,7 @@
             this.bankTitLBt.ImagePosition = 18;
             this.bankTitLBt.ImageZoom = 50;
             this.bankTitLBt.LabelPosition = 36;
-            this.bankTitLBt.LabelText = "0.0";
+            this.bankTitLBt.LabelText = "0";
             this.bankTitLBt.Location = new System.Drawing.Point(452, 40);
             this.bankTitLBt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bankTitLBt.Name = "bankTitLBt";
@@ -408,7 +408,7 @@
             this.koshTitLBt.ImagePosition = 18;
             this.koshTitLBt.ImageZoom = 50;
             this.koshTitLBt.LabelPosition = 36;
-            this.koshTitLBt.LabelText = "0.0";
+            this.koshTitLBt.LabelText = "0";
             this.koshTitLBt.Location = new System.Drawing.Point(326, 40);
             this.koshTitLBt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.koshTitLBt.Name = "koshTitLBt";
@@ -429,7 +429,7 @@
             this.cartTitLBt.ImagePosition = 18;
             this.cartTitLBt.ImageZoom = 50;
             this.cartTitLBt.LabelPosition = 36;
-            this.cartTitLBt.LabelText = "0.0";
+            this.cartTitLBt.LabelText = "0";
             this.cartTitLBt.Location = new System.Drawing.Point(209, 40);
             this.cartTitLBt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cartTitLBt.Name = "cartTitLBt";
@@ -556,7 +556,6 @@
             this.textPopolnenie.Name = "textPopolnenie";
             this.textPopolnenie.Size = new System.Drawing.Size(131, 20);
             this.textPopolnenie.TabIndex = 13;
-         //   this.textPopolnenie.TextChanged += new System.EventHandler(this.textPopolnenie_TextChanged);
             // 
             // bunifuCustomLabel7
             // 
@@ -876,6 +875,84 @@
             this.Grafik.TabIndex = 3;
             this.Grafik.Text = "Grafik";
             // 
+            // otcPribl
+            // 
+            this.otcPribl.AutoSize = true;
+            this.otcPribl.BackColor = System.Drawing.SystemColors.Control;
+            this.otcPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otcPribl.ForeColor = System.Drawing.Color.DarkGreen;
+            this.otcPribl.Location = new System.Drawing.Point(149, 164);
+            this.otcPribl.Name = "otcPribl";
+            this.otcPribl.Size = new System.Drawing.Size(62, 29);
+            this.otcPribl.TabIndex = 39;
+            this.otcPribl.Text = ". . .";
+            this.otcPribl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // texPribl
+            // 
+            this.texPribl.AutoSize = true;
+            this.texPribl.BackColor = System.Drawing.SystemColors.Control;
+            this.texPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.texPribl.ForeColor = System.Drawing.Color.DarkGreen;
+            this.texPribl.Location = new System.Drawing.Point(13, 164);
+            this.texPribl.Name = "texPribl";
+            this.texPribl.Size = new System.Drawing.Size(107, 29);
+            this.texPribl.TabIndex = 38;
+            this.texPribl.Text = "Прибыль";
+            this.texPribl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // otcDohod
+            // 
+            this.otcDohod.AutoSize = true;
+            this.otcDohod.BackColor = System.Drawing.SystemColors.Control;
+            this.otcDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otcDohod.ForeColor = System.Drawing.Color.Aqua;
+            this.otcDohod.Location = new System.Drawing.Point(149, 135);
+            this.otcDohod.Name = "otcDohod";
+            this.otcDohod.Size = new System.Drawing.Size(62, 29);
+            this.otcDohod.TabIndex = 37;
+            this.otcDohod.Text = ". . .";
+            this.otcDohod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // texDohod
+            // 
+            this.texDohod.AutoSize = true;
+            this.texDohod.BackColor = System.Drawing.SystemColors.Control;
+            this.texDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.texDohod.ForeColor = System.Drawing.Color.DarkGreen;
+            this.texDohod.Location = new System.Drawing.Point(13, 135);
+            this.texDohod.Name = "texDohod";
+            this.texDohod.Size = new System.Drawing.Size(81, 29);
+            this.texDohod.TabIndex = 36;
+            this.texDohod.Text = "Доход";
+            this.texDohod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // otcRashod
+            // 
+            this.otcRashod.AutoSize = true;
+            this.otcRashod.BackColor = System.Drawing.SystemColors.Control;
+            this.otcRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otcRashod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.otcRashod.Location = new System.Drawing.Point(149, 106);
+            this.otcRashod.Name = "otcRashod";
+            this.otcRashod.Size = new System.Drawing.Size(62, 29);
+            this.otcRashod.TabIndex = 34;
+            this.otcRashod.Text = ". . .";
+            this.otcRashod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // texRashod
+            // 
+            this.texRashod.AutoSize = true;
+            this.texRashod.BackColor = System.Drawing.SystemColors.Control;
+            this.texRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.texRashod.ForeColor = System.Drawing.Color.DarkGreen;
+            this.texRashod.Location = new System.Drawing.Point(13, 106);
+            this.texRashod.Name = "texRashod";
+            this.texRashod.Size = new System.Drawing.Size(89, 29);
+            this.texRashod.TabIndex = 33;
+            this.texRashod.Text = "Расход";
+            this.texRashod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // posNed
             // 
             this.posNed.ActiveBorderThickness = 1;
@@ -925,6 +1002,7 @@
             this.etotM.Size = new System.Drawing.Size(172, 41);
             this.etotM.TabIndex = 29;
             this.etotM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.etotM.Click += new System.EventHandler(this.etotM_Click);
             // 
             // proshM
             // 
@@ -967,108 +1045,30 @@
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea3.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.SystemColors.Control;
-            legend3.InterlacedRowsColor = System.Drawing.SystemColors.Control;
-            legend3.Name = "Legend1";
-            legend3.TitleBackColor = System.Drawing.SystemColors.Control;
-            this.chart1.Legends.Add(legend3);
+            chartArea2.BackColor = System.Drawing.SystemColors.Control;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.SystemColors.Control;
+            legend2.InterlacedRowsColor = System.Drawing.SystemColors.Control;
+            legend2.Name = "Legend1";
+            legend2.TitleBackColor = System.Drawing.SystemColors.Control;
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(18, 246);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series3.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            series3.BorderColor = System.Drawing.SystemColors.Control;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.LabelBackColor = System.Drawing.SystemColors.Control;
-            series3.LabelBorderColor = System.Drawing.SystemColors.Control;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            this.chart1.Series.Add(series3);
+            series2.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            series2.BorderColor = System.Drawing.SystemColors.Control;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.LabelBackColor = System.Drawing.SystemColors.Control;
+            series2.LabelBorderColor = System.Drawing.SystemColors.Control;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(269, 201);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            // 
-            // otcRashod
-            // 
-            this.otcRashod.AutoSize = true;
-            this.otcRashod.BackColor = System.Drawing.SystemColors.Control;
-            this.otcRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.otcRashod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.otcRashod.Location = new System.Drawing.Point(149, 106);
-            this.otcRashod.Name = "otcRashod";
-            this.otcRashod.Size = new System.Drawing.Size(62, 29);
-            this.otcRashod.TabIndex = 34;
-            this.otcRashod.Text = ". . .";
-            this.otcRashod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // texRashod
-            // 
-            this.texRashod.AutoSize = true;
-            this.texRashod.BackColor = System.Drawing.SystemColors.Control;
-            this.texRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.texRashod.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texRashod.Location = new System.Drawing.Point(13, 106);
-            this.texRashod.Name = "texRashod";
-            this.texRashod.Size = new System.Drawing.Size(89, 29);
-            this.texRashod.TabIndex = 33;
-            this.texRashod.Text = "Расход";
-            this.texRashod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // texDohod
-            // 
-            this.texDohod.AutoSize = true;
-            this.texDohod.BackColor = System.Drawing.SystemColors.Control;
-            this.texDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.texDohod.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texDohod.Location = new System.Drawing.Point(13, 135);
-            this.texDohod.Name = "texDohod";
-            this.texDohod.Size = new System.Drawing.Size(81, 29);
-            this.texDohod.TabIndex = 36;
-            this.texDohod.Text = "Доход";
-            this.texDohod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // otcDohod
-            // 
-            this.otcDohod.AutoSize = true;
-            this.otcDohod.BackColor = System.Drawing.SystemColors.Control;
-            this.otcDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.otcDohod.ForeColor = System.Drawing.Color.Aqua;
-            this.otcDohod.Location = new System.Drawing.Point(149, 135);
-            this.otcDohod.Name = "otcDohod";
-            this.otcDohod.Size = new System.Drawing.Size(62, 29);
-            this.otcDohod.TabIndex = 37;
-            this.otcDohod.Text = ". . .";
-            this.otcDohod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // texPribl
-            // 
-            this.texPribl.AutoSize = true;
-            this.texPribl.BackColor = System.Drawing.SystemColors.Control;
-            this.texPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.texPribl.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texPribl.Location = new System.Drawing.Point(13, 164);
-            this.texPribl.Name = "texPribl";
-            this.texPribl.Size = new System.Drawing.Size(107, 29);
-            this.texPribl.TabIndex = 38;
-            this.texPribl.Text = "Прибыль";
-            this.texPribl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // otcPribl
-            // 
-            this.otcPribl.AutoSize = true;
-            this.otcPribl.BackColor = System.Drawing.SystemColors.Control;
-            this.otcPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.otcPribl.ForeColor = System.Drawing.Color.DarkGreen;
-            this.otcPribl.Location = new System.Drawing.Point(149, 164);
-            this.otcPribl.Name = "otcPribl";
-            this.otcPribl.Size = new System.Drawing.Size(62, 29);
-            this.otcPribl.TabIndex = 39;
-            this.otcPribl.Text = ". . .";
-            this.otcPribl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

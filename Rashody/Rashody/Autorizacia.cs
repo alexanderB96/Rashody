@@ -379,59 +379,7 @@ namespace Rashody
             SDR3.Close();
             cnn.Close();
         }
-
-        public void Report (Form1 form)
-        {
-            cnn.Open();
-            comand = cnn.CreateCommand();
-            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Списание%' ";
-            using (SqlDataReader reader = comand.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                   
-                    form.otcRashod.Text = reader["SUMM"].ToString();
-                }
-                else
-                {
-                    // MessageBox.Show("Error", "OK");
-                }
-            }
-            cnn.Close();
-
-            cnn.Open();
-            comand = cnn.CreateCommand();
-            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Пополнение%' ";
-            using (SqlDataReader reader = comand.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                   form.otcDohod.Text = reader["SUMM"].ToString();
-                }
-                else
-                {
-                    // MessageBox.Show("Error", "OK");
-                }
-            }
-            cnn.Close();
-            cnn.Open();
-            comand = cnn.CreateCommand();
-            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' ";
-             using (SqlDataReader reader = comand.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                     form.otcPribl.Text = reader["SUMM"].ToString();
-                }
-                else
-                {
-                    // MessageBox.Show("Error", "OK");
-                }
-            }
-            cnn.Close();
-        }
-
-         
+                
 
 
     }
