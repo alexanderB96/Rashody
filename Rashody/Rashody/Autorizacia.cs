@@ -384,6 +384,65 @@ namespace Rashody
             cnn.Close();
         }
 
+        public void Report (Form1 form)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Списание%' ";
+            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
+            using (SqlDataReader reader = comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    /*form.cartaMoney.Text = null;
+                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
+                    form.otcRashod.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            cnn.Close();
+
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Пополнение%' ";
+            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
+            using (SqlDataReader reader = comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    /*form.cartaMoney.Text = null;
+                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
+                    form.otcDohod.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            cnn.Close();
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' ";
+            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
+            using (SqlDataReader reader = comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    /*form.cartaMoney.Text = null;
+                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
+                    form.otcPribl.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            cnn.Close();
+        }
+
          
 
 

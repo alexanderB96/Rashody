@@ -230,5 +230,14 @@ namespace Rashody
             Reg okn = new Reg();
             okn.ShowDialog();
         }
+
+        private void proshM_Click(object sender, EventArgs e) // вывод отчёта за прошлый месяц
+        {
+            
+            Autorizacia otc = new Autorizacia();
+            otc.Report(this);
+            
+
+        }
     }
 }
