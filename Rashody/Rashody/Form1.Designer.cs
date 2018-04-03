@@ -556,7 +556,7 @@
             this.textPopolnenie.Name = "textPopolnenie";
             this.textPopolnenie.Size = new System.Drawing.Size(131, 20);
             this.textPopolnenie.TabIndex = 13;
-            this.textPopolnenie.TextChanged += new System.EventHandler(this.textPopolnenie_TextChanged);
+         //   this.textPopolnenie.TextChanged += new System.EventHandler(this.textPopolnenie_TextChanged);
             // 
             // bunifuCustomLabel7
             // 

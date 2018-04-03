@@ -118,13 +118,11 @@ namespace Rashody
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = " SELECT  Dohod.UsersID, SUM(Dohod.KolichestvoSredstv) AS SUMMA FROM dbo.Dohod Where UsersID = '" + form.id + "' AND Dohod.Var_Scheta = ' 1 '   GROUP BY Dohod.UsersID ";
-            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
             using (SqlDataReader reader = comand.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    /*form.cartaMoney.Text = null;
-                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
+                    
                     form.cartTitLBt.LabelText = reader["SUMMA"].ToString();
                 }
                 else
@@ -141,8 +139,7 @@ namespace Rashody
             {
                 if (reader.Read())
                 {
-                   /* form.koshMoney.Text = null;
-                    form.koshMoney.Text = reader["SUMMA"].ToString();*/
+                  
                     form.koshTitLBt.LabelText = reader["SUMMA"].ToString();
                 }
                 else
@@ -159,8 +156,7 @@ namespace Rashody
             {
                 if (reader.Read())
                 {
-                    /*form.bankMoney.Text = null;
-                    form.bankMoney.Text = reader["SUMMA"].ToString();*/
+                    
                     form.bankTitLBt.LabelText = reader["SUMMA"].ToString();
                 }
                 else
@@ -389,13 +385,11 @@ namespace Rashody
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Списание%' ";
-            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
             using (SqlDataReader reader = comand.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    /*form.cartaMoney.Text = null;
-                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
+                   
                     form.otcRashod.Text = reader["SUMM"].ToString();
                 }
                 else
@@ -408,14 +402,11 @@ namespace Rashody
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Пополнение%' ";
-            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
             using (SqlDataReader reader = comand.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    /*form.cartaMoney.Text = null;
-                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
-                    form.otcDohod.Text = reader["SUMM"].ToString();
+                   form.otcDohod.Text = reader["SUMM"].ToString();
                 }
                 else
                 {
@@ -426,14 +417,11 @@ namespace Rashody
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod WHERE Dohod.Date2 >= DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP) - 1, 0) AND Dohod.Date2 < DATEADD(MONTH, DATEDIFF(MONTH, 0, CURRENT_TIMESTAMP), 0) AND Dohod.UsersID = '" + form.id + "' ";
-            // comand.CommandText = "SELECT * FROM Dohod Where UsersID = '" + form.id + "' and Var_Scheta = ' 1 ' ";
-            using (SqlDataReader reader = comand.ExecuteReader())
+             using (SqlDataReader reader = comand.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    /*form.cartaMoney.Text = null;
-                    form.cartaMoney.Text = reader["SUMMA"].ToString();*/
-                    form.otcPribl.Text = reader["SUMM"].ToString();
+                     form.otcPribl.Text = reader["SUMM"].ToString();
                 }
                 else
                 {

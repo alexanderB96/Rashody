@@ -78,16 +78,7 @@ namespace Rashody
             Application.Exit();  // закрытие программы        
         }
 
-        private void cardButt_Click(object sender, EventArgs e)
-        {
-          
-             
-        }
-
-         private void koshButt_Click(object sender, EventArgs e)
-         {
-           
-         }
+        
 
          private void bankButt_Click(object sender, EventArgs e)
          {
@@ -132,15 +123,7 @@ namespace Rashody
            
         }
 
-        private void textPopolnenie_TextChanged(object sender, EventArgs e)
-        {
-          /*  if (textPopolnenie.Text.Length>0)
-            {
-                bunifuImageButton1.Enabled = false;
-            }
-            else
-                bunifuImageButton1.Enabled = true;*/
-        }
+       
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
