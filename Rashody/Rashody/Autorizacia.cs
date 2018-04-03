@@ -265,7 +265,7 @@ namespace Rashody
         }
         public void Spisanie(Form1 form)
         {
-            if (form.znachLabel == "0")
+            if (form.znachLabel == "0") // проверка условия, если сумма в счёте меньше нуля. то списать средства со счёта нельзя
             {
                 MessageBox.Show("Сумма списания не должна быть больше суммы остатка", "Ошибка списания", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 form.znachLabel = "";

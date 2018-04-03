@@ -96,10 +96,11 @@ namespace Rashody
             tekst =  bt.Tag.ToString();
                         
 
+            
             if (tekst == "1")
             {
                 viborSpis.Text = viborPopol.Text = "Карта";
-                if (Convert.ToUInt32(cartTitLBt.LabelText) <= 0)
+                if (Convert.ToInt32(cartTitLBt.LabelText) <= 0) // проверка значения в титле (сумма для счета), что бы дальше использовать переменную для проверки меньше нуля
                           znachLabel = "0";
                 
 
@@ -107,7 +108,7 @@ namespace Rashody
             else if (tekst == "2")
             {
                 viborSpis.Text = viborPopol.Text = "Кошелёк";
-                if (Convert.ToUInt32(koshTitLBt.LabelText) <= 0)
+                if (Convert.ToInt32(koshTitLBt.LabelText) <= 0)
                     znachLabel = "0";
 
             }
@@ -115,7 +116,7 @@ namespace Rashody
             else if (tekst == "3")
             {
                 viborSpis.Text = viborPopol.Text = "Банковский счёт";
-                if (Convert.ToUInt32(bankTitLBt.LabelText) <= 0)
+                if (Convert.ToInt32(bankTitLBt.LabelText) <= 0)
                     znachLabel = "0";
 
             }
