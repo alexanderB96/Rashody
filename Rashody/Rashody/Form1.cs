@@ -228,6 +228,7 @@ namespace Rashody
         {
             Reg okn = new Reg();
             okn.ShowDialog();
+            // хей
         }
     }
 }
