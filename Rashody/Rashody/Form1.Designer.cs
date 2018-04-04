@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelGrafik = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.HistoryLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -98,6 +104,8 @@
             this.proshM = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabControl.SuspendLayout();
@@ -115,6 +123,8 @@
             this.History.SuspendLayout();
             this.Grafik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -858,6 +868,8 @@
             // Grafik
             // 
             this.Grafik.BackColor = System.Drawing.SystemColors.Control;
+            this.Grafik.Controls.Add(this.chart3);
+            this.Grafik.Controls.Add(this.chart2);
             this.Grafik.Controls.Add(this.otcPribl);
             this.Grafik.Controls.Add(this.texPribl);
             this.Grafik.Controls.Add(this.otcDohod);
@@ -881,7 +893,7 @@
             this.otcPribl.BackColor = System.Drawing.SystemColors.Control;
             this.otcPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otcPribl.ForeColor = System.Drawing.Color.DarkGreen;
-            this.otcPribl.Location = new System.Drawing.Point(149, 164);
+            this.otcPribl.Location = new System.Drawing.Point(491, 73);
             this.otcPribl.Name = "otcPribl";
             this.otcPribl.Size = new System.Drawing.Size(62, 29);
             this.otcPribl.TabIndex = 39;
@@ -894,7 +906,7 @@
             this.texPribl.BackColor = System.Drawing.SystemColors.Control;
             this.texPribl.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.texPribl.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texPribl.Location = new System.Drawing.Point(13, 164);
+            this.texPribl.Location = new System.Drawing.Point(378, 73);
             this.texPribl.Name = "texPribl";
             this.texPribl.Size = new System.Drawing.Size(107, 29);
             this.texPribl.TabIndex = 38;
@@ -907,7 +919,7 @@
             this.otcDohod.BackColor = System.Drawing.SystemColors.Control;
             this.otcDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otcDohod.ForeColor = System.Drawing.Color.Aqua;
-            this.otcDohod.Location = new System.Drawing.Point(149, 135);
+            this.otcDohod.Location = new System.Drawing.Point(286, 73);
             this.otcDohod.Name = "otcDohod";
             this.otcDohod.Size = new System.Drawing.Size(62, 29);
             this.otcDohod.TabIndex = 37;
@@ -920,7 +932,7 @@
             this.texDohod.BackColor = System.Drawing.SystemColors.Control;
             this.texDohod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.texDohod.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texDohod.Location = new System.Drawing.Point(13, 135);
+            this.texDohod.Location = new System.Drawing.Point(209, 73);
             this.texDohod.Name = "texDohod";
             this.texDohod.Size = new System.Drawing.Size(81, 29);
             this.texDohod.TabIndex = 36;
@@ -933,7 +945,7 @@
             this.otcRashod.BackColor = System.Drawing.SystemColors.Control;
             this.otcRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otcRashod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.otcRashod.Location = new System.Drawing.Point(149, 106);
+            this.otcRashod.Location = new System.Drawing.Point(96, 73);
             this.otcRashod.Name = "otcRashod";
             this.otcRashod.Size = new System.Drawing.Size(62, 29);
             this.otcRashod.TabIndex = 34;
@@ -946,7 +958,7 @@
             this.texRashod.BackColor = System.Drawing.SystemColors.Control;
             this.texRashod.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.texRashod.ForeColor = System.Drawing.Color.DarkGreen;
-            this.texRashod.Location = new System.Drawing.Point(13, 106);
+            this.texRashod.Location = new System.Drawing.Point(13, 73);
             this.texRashod.Name = "texRashod";
             this.texRashod.Size = new System.Drawing.Size(89, 29);
             this.texRashod.TabIndex = 33;
@@ -971,12 +983,13 @@
             this.posNed.IdleFillColor = System.Drawing.SystemColors.Control;
             this.posNed.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.posNed.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.posNed.Location = new System.Drawing.Point(384, 60);
+            this.posNed.Location = new System.Drawing.Point(361, 27);
             this.posNed.Margin = new System.Windows.Forms.Padding(5);
             this.posNed.Name = "posNed";
             this.posNed.Size = new System.Drawing.Size(172, 41);
             this.posNed.TabIndex = 30;
             this.posNed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.posNed.Click += new System.EventHandler(this.posNed_Click);
             // 
             // etotM
             // 
@@ -996,7 +1009,7 @@
             this.etotM.IdleFillColor = System.Drawing.SystemColors.Control;
             this.etotM.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.etotM.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.etotM.Location = new System.Drawing.Point(202, 60);
+            this.etotM.Location = new System.Drawing.Point(187, 27);
             this.etotM.Margin = new System.Windows.Forms.Padding(5);
             this.etotM.Name = "etotM";
             this.etotM.Size = new System.Drawing.Size(172, 41);
@@ -1022,7 +1035,7 @@
             this.proshM.IdleFillColor = System.Drawing.SystemColors.Control;
             this.proshM.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.proshM.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.proshM.Location = new System.Drawing.Point(18, 60);
+            this.proshM.Location = new System.Drawing.Point(10, 27);
             this.proshM.Margin = new System.Windows.Forms.Padding(5);
             this.proshM.Name = "proshM";
             this.proshM.Size = new System.Drawing.Size(174, 41);
@@ -1034,7 +1047,7 @@
             // 
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("RomanD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(3, 16);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(3, 4);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(246, 29);
             this.bunifuCustomLabel10.TabIndex = 27;
@@ -1045,30 +1058,74 @@
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea2.BackColor = System.Drawing.SystemColors.Control;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.SystemColors.Control;
-            legend2.InterlacedRowsColor = System.Drawing.SystemColors.Control;
-            legend2.Name = "Legend1";
-            legend2.TitleBackColor = System.Drawing.SystemColors.Control;
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(18, 246);
+            chartArea6.BackColor = System.Drawing.SystemColors.Control;
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.BackColor = System.Drawing.Color.Transparent;
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend6.Name = "Legend1";
+            legend6.Title = "Общие данные";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(0, 105);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            series2.BorderColor = System.Drawing.SystemColors.Control;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.LabelBackColor = System.Drawing.SystemColors.Control;
-            series2.LabelBorderColor = System.Drawing.SystemColors.Control;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(269, 201);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F);
+            series6.Legend = "Legend1";
+            series6.Name = "Pervii";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(267, 355);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.SystemColors.Control;
+            this.chart2.BorderlineColor = System.Drawing.SystemColors.Control;
+            chartArea5.BackColor = System.Drawing.SystemColors.Control;
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.Transparent;
+            legend5.Name = "Legend1";
+            legend5.Title = "Пополнения";
+            this.chart2.Legends.Add(legend5);
+            this.chart2.Location = new System.Drawing.Point(273, 117);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F);
+            series5.Legend = "Legend1";
+            series5.Name = "Pervii";
+            this.chart2.Series.Add(series5);
+            this.chart2.Size = new System.Drawing.Size(302, 171);
+            this.chart2.TabIndex = 40;
+            this.chart2.Text = "chart2";
+            // 
+            // chart3
+            // 
+            this.chart3.BackColor = System.Drawing.SystemColors.Control;
+            this.chart3.BorderlineColor = System.Drawing.SystemColors.Control;
+            chartArea4.BackColor = System.Drawing.SystemColors.Control;
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.Transparent;
+            legend4.Name = "Legend1";
+            legend4.Title = "Списание";
+            this.chart3.Legends.Add(legend4);
+            this.chart3.Location = new System.Drawing.Point(273, 294);
+            this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F);
+            series4.Legend = "Legend1";
+            series4.Name = "Pervii";
+            this.chart3.Series.Add(series4);
+            this.chart3.Size = new System.Drawing.Size(302, 169);
+            this.chart3.TabIndex = 41;
+            this.chart3.Text = "chart3";
             // 
             // Form1
             // 
@@ -1104,6 +1161,8 @@
             this.Grafik.ResumeLayout(false);
             this.Grafik.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1134,7 +1193,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         public Bunifu.Framework.UI.BunifuCustomLabel labelGrafik;
         private System.Windows.Forms.TabPage Grafik;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public Bunifu.Framework.UI.BunifuCustomLabel ZaReg;
         public System.Windows.Forms.TabPage tabPage4;
         public Bunifu.Framework.UI.BunifuTileButton bankTitLBt;
@@ -1177,6 +1235,9 @@
         public Bunifu.Framework.UI.BunifuCustomLabel texRashod;
         public Bunifu.Framework.UI.BunifuCustomLabel otcPribl;
         public Bunifu.Framework.UI.BunifuCustomLabel texPribl;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }
 

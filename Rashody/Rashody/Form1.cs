@@ -85,33 +85,33 @@ namespace Rashody
             // обработка события какая кнопка нажата, присвоение значения в переменную текст для использования в БД
             var bt = sender as BunifuTileButton;
             tekst =  bt.Tag.ToString();
-                        
 
+           
+                if (tekst == "1")
+                {
+                    viborSpis.Text = viborPopol.Text = "Карта";
+                    if (Convert.ToInt32(cartTitLBt.LabelText) <= 0) // проверка значения в титле (сумма для счета), что бы дальше использовать переменную для проверки меньше нуля
+                        znachLabel = "0";
+
+
+                }
+                else if (tekst == "2")
+                {
+                    viborSpis.Text = viborPopol.Text = "Кошелёк";
+                    if (Convert.ToInt32(koshTitLBt.LabelText) <= 0)
+                        znachLabel = "0";
+
+                }
+
+                else if (tekst == "3")
+                {
+                    viborSpis.Text = viborPopol.Text = "Банковский счёт";
+                    if (Convert.ToInt32(bankTitLBt.LabelText) <= 0)
+                        znachLabel = "0";
+
+                }
             
-            if (tekst == "1")
-            {
-                viborSpis.Text = viborPopol.Text = "Карта";
-                if (Convert.ToInt32(cartTitLBt.LabelText) <= 0) // проверка значения в титле (сумма для счета), что бы дальше использовать переменную для проверки меньше нуля
-                          znachLabel = "0";
-                
-
-            }
-            else if (tekst == "2")
-            {
-                viborSpis.Text = viborPopol.Text = "Кошелёк";
-                if (Convert.ToInt32(koshTitLBt.LabelText) <= 0)
-                    znachLabel = "0";
-
-            }
-
-            else if (tekst == "3")
-            {
-                viborSpis.Text = viborPopol.Text = "Банковский счёт";
-                if (Convert.ToInt32(bankTitLBt.LabelText) <= 0)
-                    znachLabel = "0";
-
-            }
-
+        
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -217,10 +217,29 @@ namespace Rashody
         private void proshM_Click(object sender, EventArgs e) // вывод отчёта за прошлый месяц
         {
             
-            Autorizacia otc = new Autorizacia();
-            otc.Report(this);
-            
+            Report rpt = new Report();
+            rpt.prosM(this);
+            ChartReport rep = new ChartReport();
+            rep.graficPROSHM(this);
 
         }
+
+        private void etotM_Click(object sender, EventArgs e)
+        {
+            Report rpt = new Report();
+            rpt.tekM(this);
+            ChartReport rep = new ChartReport();
+            rep.graficETOTM(this);
+        }
+
+        private void posNed_Click(object sender, EventArgs e)
+        {
+            ChartReport rep = new ChartReport();
+            rep.graficPROSHNED(this);
+            Report rpt = new Report();
+            rpt.proshN(this);
+
+        }
+        
     }
 }

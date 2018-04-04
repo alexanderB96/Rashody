@@ -117,6 +117,57 @@ namespace Rashody
             }
             dst.cnn.Close();
         }
+
+        public void proshN(Form1 form)  //прошедшая неделя
+        {
+            dst.cnn.Open();
+            dst.comand = dst.cnn.CreateCommand();
+            dst.comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod  WHERE Dohod.Date2 >= DATEADD(DAY, -7, CAST( CURRENT_TIMESTAMP AS DATE))  AND Dohod.Date2 < CAST(CURRENT_TIMESTAMP AS DATE) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Списание%' ";
+            using (SqlDataReader reader = dst.comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+
+                    form.otcRashod.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            dst.cnn.Close();
+
+            dst.cnn.Open();
+            dst.comand = dst.cnn.CreateCommand();
+            dst.comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod  WHERE Dohod.Date2 >= DATEADD(DAY, -7, CAST( CURRENT_TIMESTAMP AS DATE))  AND Dohod.Date2 < CAST(CURRENT_TIMESTAMP AS DATE) AND Dohod.UsersID = '" + form.id + "' AND Dohod.Deistv LIKE '%Пополнение%' ";
+            using (SqlDataReader reader = dst.comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    form.otcDohod.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            dst.cnn.Close();
+            dst.cnn.Open();
+            dst.comand = dst.cnn.CreateCommand();
+            dst.comand.CommandText = " SELECT SUM(Dohod.KolichestvoSredstv) AS SUMM FROM dbo.Dohod  WHERE Dohod.Date2 >= DATEADD(DAY, -7, CAST( CURRENT_TIMESTAMP AS DATE))  AND Dohod.Date2 < CAST(CURRENT_TIMESTAMP AS DATE) AND Dohod.UsersID = '" + form.id + "' ";
+            using (SqlDataReader reader = dst.comand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    form.otcPribl.Text = reader["SUMM"].ToString();
+                }
+                else
+                {
+                    // MessageBox.Show("Error", "OK");
+                }
+            }
+            dst.cnn.Close();
+        }
     }
 
 }
